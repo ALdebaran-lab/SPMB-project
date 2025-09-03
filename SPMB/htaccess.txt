@@ -1,0 +1,28 @@
+# PPDB .htaccess Configuration
+# Backup file - rename to .htaccess if needed
+
+# Basic security
+<Files "*.sql">
+    Require all denied
+</Files>
+
+<Files "*.log">
+    Require all denied
+</Files>
+
+# Protect config directory
+<Files "config/*">
+    Require all denied
+</Files>
+
+# Protect uploads directory
+<Directory "uploads">
+    <FilesMatch "\.(php|php3|php4|php5|phtml|pl|py|jsp|asp|sh|cgi)$">
+        Require all denied
+    </FilesMatch>
+</Directory>
+
+# Custom error pages
+ErrorDocument 404 /SPMB/index.php
+ErrorDocument 403 /SPMB/index.php
+ErrorDocument 500 /SPMB/index.php

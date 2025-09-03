@@ -1,0 +1,6 @@
+PPDB Error Log
+===============
+Tanggal: <?php echo date('Y-m-d H:i:s'); ?>
+
+File ini akan mencatat error yang terjadi pada website PPDB.
+Jika ada error, silakan periksa file ini untuk informasi lebih lanjut.
